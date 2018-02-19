@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Arrow functions</title>
+    </head>
+    <body>
+        <script>
+            
+            const names = ['vali', 'masha', 'jessi'];
+
+            const fullNames = names.map(function(name) {
+                return `${name} pufasta`;
+            });
+
+            const fullNames2 = names.map((name) => {
+                return `${name} pufasta`;
+            });
+
+            //if you have only one paramater (removed brackets outside parameters)
+            const fullNames3 = names.map(name => {
+                return `${name} pufasta`;
+            });
+
+            //implicit return
+            const fullNames4 = names.map(name => `${name} pufasta`);
+
+            //no parameters
+            const fullNames5 = names.map(() => `cool pufasta`);
+
+
+            console.log(fullNames);
+            console.log(fullNames2);
+            console.log(fullNames3);
+            console.log(fullNames4);
+            console.log(fullNames5);
+
+
+            const sayMyName = (name) => { 
+                alert(`Hello ${name}!`)
+            }
+            sayMyName('Vali');
+
+        </script>
+    </body>
+</html>
