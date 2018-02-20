@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring!</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            first: 'Vali',
+            last: 'Pufasta',
+            country: 'Croatia',
+            city: 'Zagreb',
+            twitter: '@Vafelini'
+        };
+        
+        //destructuring
+        const { first, last, twitter } = person;
+
+        // nested data
+        const vali = {
+            first: 'Vali',
+            last: 'Pufasta',
+            links: {
+                social: {
+                    twitter: 'https://twitter.com/Vafelini',
+                    facebook: 'https://www.facebook.com/valentina.viskov'
+                },
+                web: {
+                    blog: 'https://nope.nope'
+                }
+            }
+        }
+
+        const { twitter:tweet, facebook:fb } = vali.links.social;
+        
+        const settings = {width: 300, color: 'black'} // what if we need height, fontSize
+        // with default value
+        const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+
+    </script>
+</body>
+</html>

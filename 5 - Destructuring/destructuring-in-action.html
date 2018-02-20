@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring in Action!</title>
+</head>
+<body>
+    <script>
+
+        //using let instead of const so we can update values
+        let inRing = 'Hulk Hogan';
+        let onSide = 'The Rock';
+
+        console.log(inRing, onSide);
+
+        // deconstructing
+        [inRing,onSide] = [onSide, inRing];
+
+        console.log(inRing, onSide);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructuring!</title>
+</head>
+<body>
+    <script>
+
+        const details = ['Vali Pufasta', '123', 'valili.com'];
+        // when you pull from an object, map, set you use {}
+        // when you pull from an array you use []
+        const [name, id, website] = details;
+        console.log(name, id, website);
+
+        const data = 'Basketball,Sports,90210,23,vali,pufasta,cool';
+        const [itemName, category, sku, inventory] = data.split(',');
+        
+        const team = ['Vali', 'Masha', 'Jessi', 'Edgar', 'Beni'];
+
+        const [captain, assistant, ...players] = team;
+
+    </script>
+</body>
+</html>
