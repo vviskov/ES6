@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Template strings!</title>
+    </head>
+    <body>
+        <script>
+
+            const song = {
+                name: 'Everything has changed',
+                artist: 'Taylor Swift',
+                featuring: 'Ed Sheeran'
+            };
+
+            const markup = `
+                <div class="song">
+                    <p>
+                        ${song.name}
+                         - 
+                        ${song.artist}
+                        ${song.featuring ? `(Feat. ˘${song.featuring})` : ``}
+                        
+                    </p>
+                </div>
+            `;
+
+            document.body.innerHTML = markup;
+
+        </script>
+    </body>
+</html>

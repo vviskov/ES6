@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Template strings!</title>
+    </head>
+    <body>
+        <script>
+
+           const person = {
+                name: 'Vali',
+                job: 'Web developer',
+                city: 'Zagreb',
+                bio: 'Sleepy girl learning new stuff.'
+           };
+
+           /*  var text = "Hello there, \
+                how are you? \
+                "; */
+
+            const markup = `
+                <div class="person">
+                    <h2>
+                        ${person.name}
+                        <span class="job">${person.job}</span>
+                    </h2>
+                    <p class="location">${person.city}</p>
+                    <p class="bio">${person.bio}</p>
+                </div>
+            `;
+
+            console.log(markup);
+
+            document.body.innerHTML = markup;
+
+        </script>
+    </body>
+</html>

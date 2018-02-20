@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Template strings!</title>
+    </head>
+    <body>
+        <script>
+
+            const beer = {
+                name: 'C4',
+                brewery: 'Nova Runda',
+                keywords: ['IPA', 'light', 'tropical']
+            }
+
+            function renderKeywords(keywords) {
+                return `
+                    <ul>
+                        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+                    </ul>
+                `;
+            }
+
+            const markup = `
+                <div class="beer">
+                    <h2>${beer.name}</h2>
+                    <p class="brewery">${beer.brewery}</p>
+                    ${renderKeywords(beer.keywords)}
+                </div>
+            `; 
+
+            document.body.innerHTML = markup;
+
+        </script>
+    </body>
+</html>

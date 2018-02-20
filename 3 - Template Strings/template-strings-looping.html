@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Template strings!</title>
+    </head>
+    <body>
+        <script>
+
+           const animals = [
+               { name: 'Jessi', age: 0.4, species: 'dog'},
+               { name: 'Masha', age: 1, species: 'cat' },
+               { name: 'Beni', age: 7, species: 'dog' }
+           ];
+
+            const markup = `
+                <ul class="animals">
+                    ${animals.map(animal => `
+                        <li>
+                            ${animal.name} 
+                            is 
+                            ${animal.species} 
+                            ${animal.age * 7} 
+                            human years old 
+                        </li>`).join('')}
+                </ul>
+            `;
+
+            console.log(markup);
+
+        </script>
+    </body>
+</html>
