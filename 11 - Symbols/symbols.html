@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Symbols</title>
+    </head>
+    <body>
+        <script>
+            // Symbol('Vali') -> descriptor
+            const vali = Symbol('Vali');
+            const person = Symbol('Vali');
+
+            const classRoom = {
+                [Symbol('Mark')]: { grade: 50, gender: 'male' },
+                [Symbol('Olivia')]: { grade: 80, gender: 'female' },
+                [Symbol('Olivia')]: { grade: 80, gender: 'female' },
+            }
+            
+
+            //can't loop over
+            for(person in classRoom) {
+                console.log(person);
+            }
+        
+        </script>
+    </body>
+</html>
