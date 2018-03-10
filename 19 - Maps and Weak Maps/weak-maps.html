@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weak Maps!</title>
+
+        <style>
+            button {
+                font-size: 50px;
+                margin:10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <script>
+      
+            // creating objects
+            let dog1 = { name: 'Jessi' };
+            let dog2 = { name: 'Beni' };
+
+            // creating Map
+            const strong = new Map();
+            // creating Weak Map
+            const weak = new WeakMap();
+
+            // add a button to each of the Maps
+            strong.set(dog1, 'Jessi is the best!');
+            weak.set(dog2, 'Beni is 2nd best!');
+
+            dog1 = null;
+            // memory leak, can't reference object that doesn't exist
+            dog2 = null;
+            // garbage collection has happened after some time
+
+        </script>
+    </body>
+</html>
